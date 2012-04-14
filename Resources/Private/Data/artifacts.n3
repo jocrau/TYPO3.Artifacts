@@ -1,0 +1,68 @@
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix cnt:     <http://www.w3.org/2011/content#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex:      <http://example.com/> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/sp#> .
+@prefix dam:     <http://typo3.org/ontology/dam#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prt:     <http://www.w3.org/2009/pointers#> .
+@prefix pto:     <http://www.productontology.org/id/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc:    <http://rdfs.org/sioc/types#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix t3o:     <http://typo3.org/ontology/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fresnel: <http://www.w3.org/2004/09/fresnel#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix :        <http://example.com/> .
+
+t3o:Extension rdfs:subClassOf t3o:Artifact .
+t3o:Package rdfs:subClassOf t3o:Artifact .
+t3o:Person owl:sameAs foaf:Person .
+
+<http://forge.typo3.org/projects/extension-contagged>
+      rdf:type t3o:Extension ;
+      dc:title "Content Parser and Tagger"@en ;
+      dc:title "Content Parser und Tagger"@de ;
+      dc:creator <http://forge.typo3.org/users/123> ;
+      dc:description "This extension parses your content to tag, replace and link specific terms. It is useful to auto-generate a glossary - but not only. See ChangeLog and WiKi (http://wiki.typo3.org/index.php/Contagged)."@en ;
+	  t3o:key "contagged" ;
+	  dcterms:hasVersion <c8e63b60-8538-11e1-b0c4-0800200c9a66> ;
+	  t3o:status t3o:Stable .
+
+<c4f5d842-8541-11e1-b0c4-0800200c9a66>
+	rdfs:label "0.0.3";
+	dcterms:issued "2012-05-12T10:20:10+06:00"^^xsd:dateTime ;
+	t3o:downloads 234 .
+
+<http://forge.typo3.org/projects/package-typo3-fluid>
+      rdf:type t3o:Package ;
+      dc:title "Fluid Template Engine"@en ;
+      dc:creator <http://forge.typo3.org/users/11> ;
+	  dc:contributor <http://forge.typo3.org/users/123> ;
+      dc:description "Fluid will be the standard templating engine used in the TYPO3 v5 project. It is also available in TYPO3 v4 since version 4.3."@en ;
+	  t3o:key "TYPO3.Fluid" ;
+	  dcterms:hasVersion <5bcc4d30-854c-11e1-b0c4-0800200c9a66> ;
+	  t3o:status t3o:Stable .
+
+<5bcc4d30-854c-11e1-b0c4-0800200c9a66>
+	rdfs:label "1.2.1";
+	dcterms:issued "2012-03-12T10:10:45+02:00"^^xsd:dateTime ;
+	t3o:downloads 1034 .
+
+<http://forge.typo3.org/users/123>
+      rdf:type foaf:Person ;
+      foaf:firstName "Jochen" ;
+      foaf:lastName "Rau" ;
+      foaf:workInfoHomepage <http://typoplanet.de> .
+
+<http://forge.typo3.org/users/11>
+      rdf:type foaf:Person ;
+      foaf:firstName "Sebastian" ;
+      foaf:lastName "Kurfürst" ;
+      foaf:workInfoHomepage <http://sandstormmedia.com> .

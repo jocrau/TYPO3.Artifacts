@@ -1,0 +1,8 @@
+-
+  name: 'Artifacts'
+  uriPattern: 'artifacts'
+  defaults:
+    '@package':    'TYPO3.Artifacts'
+    '@controller': 'Artifact'
+    '@action':     'index'
+    '@format':     'html'
