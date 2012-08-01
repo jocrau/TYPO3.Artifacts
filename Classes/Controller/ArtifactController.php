@@ -27,10 +27,13 @@ class ArtifactController extends \TYPO3\FLOW3\Mvc\Controller\ActionController {
 	 * @return void
 	 */
 	public function indexAction() {
-		$query = $this->queryRepository->findByIdentifier('8773c1a3-d201-414e-b20d-20b55aae9816');
-		$this->view->assign('results', $query->execute());
-		$content = $this->view->render(); // The query gets executed lazily during render time. Thus, we include the render() method.
-		return $content;
+		$query = $this->queryRepository->findAll()->getFirst();
+		if ($query != NULL) {
+			$this->view->assign('results', $query->execute());
+			$content = $this->view->render(); // The query gets executed lazily during render time. Thus, we include the render() method.
+			return $content;
+		}
+		return "";
 	}
 
 }
